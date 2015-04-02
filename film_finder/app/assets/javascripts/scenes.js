@@ -1,0 +1,1 @@
+console.log('scenes.js is loaded');
