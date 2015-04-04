@@ -1,5 +1,7 @@
 console.log('map.js loaded')
 
+var keyword;
+
 $(function(){
   function initialize() {
       var mapOptions = {
@@ -53,3 +55,4 @@ $(function(){
   };
   google.maps.event.addDomListener(window, 'load', initialize);
 });
+
