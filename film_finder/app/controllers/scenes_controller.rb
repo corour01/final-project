@@ -18,7 +18,7 @@ class ScenesController < ApplicationController
     @scenes = Scene.all
     @search_results = []
     @scenes.each do |scene|
-      if (scene.director.include? params[:keyword] or scene.film.include? params[:keyword])
+      if (scene.director.downcase.include? params[:keyword].downcase or scene.film.downcase.include? params[:keyword].downcase)
         @search_results << scene
       end
     end

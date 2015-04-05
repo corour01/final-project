@@ -47,12 +47,6 @@ function initialize() {
 
 var renderScenes = function(scenes){
   scenes.forEach(function(scene){
-    var icon = new google.maps.MarkerImage(
-      "http://www.arcurrent.com/wp-content/uploads/2013/02/movie-reel.jpg", //url
-      new google.maps.Size(20, 20), //size
-      new google.maps.Point(0,0), //origin
-      new google.maps.Point(0, 0) //anchor 
-      );
     var sceneinfo = '<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
@@ -69,7 +63,7 @@ var renderScenes = function(scenes){
     var marker = new google.maps.Marker({
       position: new google.maps.LatLng(scene.latitude, scene.longitude),
       map: map,
-      // icon: icon
+      icon: "http://www.atleurasia.com/in/wp-content/uploads/2015/04/film-icon.png"
       });
     var infowindow = new google.maps.InfoWindow({
       content: sceneinfo
