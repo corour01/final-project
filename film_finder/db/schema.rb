@@ -14,20 +14,18 @@
 ActiveRecord::Schema.define(version: 0) do
 
   create_table "scenes", force: :cascade do |t|
-    t.string "Film",         limit: 255
-    t.string "Year",         limit: 255
-    t.string "AgencyCredit", limit: 255
-    t.string "ArtistCredit", limit: 255, default: ""
-    t.string "Director",     limit: 255
-    t.string "DirectorImdb", limit: 255
-    t.float  "Latitude",     limit: 24
-    t.float  "Longitude",    limit: 24
-    t.string "Borough",      limit: 255
-    t.string "Neighborhood", limit: 255
-    t.string "SceneType",    limit: 255
-    t.string "Media",        limit: 255
-    t.string "IMDB",         limit: 255
-    t.string "ClientLoc",    limit: 255
+    t.string "film",         limit: 255
+    t.string "year",         limit: 255
+    t.string "director",     limit: 255
+    t.string "director_imdb", limit: 255
+    t.float  "latitude",     limit: 24
+    t.float  "longitude",    limit: 24
+    t.string "borough",      limit: 255
+    t.string "neighborhood", limit: 255
+    t.string "scenetype",    limit: 255
+    t.string "media",        limit: 255
+    t.string "imdb",         limit: 255
+    t.string "client_loc",    limit: 255
   end
 
 end

@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   root 'scenes#index'
   get 'scenes', to: 'scenes#index'
-  get 'scenes/search', to: 'scenes#search'
+  post 'scenes/search', to: 'scenes#search_director'
+
+  resource :scenes
 end
