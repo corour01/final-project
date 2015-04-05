@@ -14,18 +14,17 @@ class ScenesController < ApplicationController
     end
   end
 
-  def search_director
+  def search
     @scenes = Scene.all
     @search_results = []
     @scenes.each do |scene|
-      if scene.director == params[:keyword]
+      if (scene.director.include? params[:keyword] or scene.film.include? params[:keyword])
         @search_results << scene
       end
     end
     respond_to do |format|
       format.html
       format.json {render json: @search_results}
-      # Pry.start(binding)
     end
   end
 
