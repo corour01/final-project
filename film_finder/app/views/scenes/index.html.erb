@@ -12,10 +12,17 @@
   <h1>Film Finder<h1>
   <body>
     <div id="map-canvas"></div>
+    <p>Find a film by entering a keyword below</p>
     <form id="search">
-      <input id="search-picture-keyword" type="text" placeholder="ENTER KEYWORD" name="picture[keyword]">
-      <button class="btn btn-submit" type="submit">
+      <input id="search-scene-keyword" type="text" placeholder="ENTER KEYWORD" name="picture[keyword]">
+      <button class="btn btn-submit" type="submit">Find it
       </button>
+    </form>
+    <form id="show-all">
+      <button type="submit">Show All Scenes</button>
+    </form>
+    <form id="hide-all">
+      <button type="submit">Hide All Scenes</button>
     </form>
     <error></error>
   </body>
